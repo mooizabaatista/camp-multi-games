@@ -13,6 +13,7 @@ import { TimesComponent } from './components/pages/times/times.component';
 import { JogosFuturosComponent } from './components/pages/jogos-futuros/jogos-futuros.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { ResultadoDetalheComponent } from './components/pages/resultado-detalhe/resultado-detalhe.component';
 
 
 
@@ -27,6 +28,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
     JogosFuturosComponent,
     RankingComponent,
     HeaderComponent,
+    ResultadoDetalheComponent,
   ],
   imports: [
     BrowserModule,

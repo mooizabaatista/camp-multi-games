@@ -5,11 +5,13 @@ import { JogosComponent } from './components/pages/jogos/jogos.component';
 import { ResultadosComponent } from './components/pages/resultados/resultados.component';
 import { TimesComponent } from './components/pages/times/times.component';
 import { JogosFuturosComponent } from './components/pages/jogos-futuros/jogos-futuros.component';
+import { ResultadoDetalheComponent } from './components/pages/resultado-detalhe/resultado-detalhe.component';
 
 const routes: Routes = [
   { path: '', component: RankingsComponent },
   { path: 'jogos', component: JogosComponent },
   { path: 'resultados', component: ResultadosComponent },
+  { path: 'resultado-detalhe/:id', component: ResultadoDetalheComponent },
   { path: 'times', component: TimesComponent },
   { path: 'jogos-futuros', component: JogosFuturosComponent },
 ];
