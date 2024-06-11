@@ -50,3 +50,44 @@
     </div>
   </div>
 </div>
+
+
+
+<div *ngIf="resultadoDetalhe">
+  <div class="col-11 m-auto mb-2" *ngFor="let mapa of resultadoDetalhe.mapas">
+    <div class="card bg-cinza-claro text-light border border-1">
+      <div class="d-flex text-center">
+        <h6 class="me-auto m-0 p-0 mt-1" style="width: 20%;">{{mapa.pontosCasa}}</h6>
+        <span>{{mapa.nomeMapa | uppercase}}</span>
+        <h6 class="ms-auto m-0 p-0 mt-1" style="width: 20%;">{{mapa.pontosFora}}</h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="resultadoDetalhe">
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-5 ms-auto text-center mt-4">
+        <ul class="list-group">
+          <p class="d-flex justify-content-start align-items-center mb-4" *ngFor="let player of resultadoDetalhe.timeCasa.players">
+            <img src="{{player.foto}}" class="border rounded-circle" width="30px" />
+            <span class="ms-2">{{player.name}}</span>
+          </p>
+        </ul>
+      </div>
+      <div class="col-2 d-flex flex-column gap-2">
+        <span class="">&nbsp;&nbsp;VS</span>
+        <div class="d-flex ms-3" style="height: 200px;">
+          <div class="vr" style="border: solid 0.1px #eee !important;"></div>
+        </div>
+      </div>
+      <div class="col-5 me-auto text-center mt-4">
+        <p class="d-flex justify-content-end mb-4 align-items-center" *ngFor="let player of resultadoDetalhe.timeFora.players">
+          <span class="me-2">{{player.name}}</span>
+          <img src="{{player.foto}}" class="border rounded-circle" width="30px" />
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
