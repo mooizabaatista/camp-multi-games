@@ -7,7 +7,7 @@ import { TimesComponent } from './components/pages/times/times.component';
 import { JogosFuturosComponent } from './components/pages/jogos-futuros/jogos-futuros.component';
 
 const routes: Routes = [
-  { path: 'ranking', component: RankingsComponent },
+  { path: '', component: RankingsComponent },
   { path: 'jogos', component: JogosComponent },
   { path: 'resultados', component: ResultadosComponent },
   { path: 'times', component: TimesComponent },
