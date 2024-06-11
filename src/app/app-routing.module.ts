@@ -12,7 +12,6 @@ const routes: Routes = [
   { path: 'resultados', component: ResultadosComponent },
   { path: 'times', component: TimesComponent },
   { path: 'jogos-futuros', component: JogosFuturosComponent },
-  { path: '**', redirectTo: '/ranking' },
 ];
 
 @NgModule({

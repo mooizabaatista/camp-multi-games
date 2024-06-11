@@ -13,6 +13,7 @@ import { TimesComponent } from './components/pages/times/times.component';
 import { JogosFuturosComponent } from './components/pages/jogos-futuros/jogos-futuros.component';
 import { RankingComponent } from './components/ranking/ranking.component';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
