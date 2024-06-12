@@ -7,7 +7,7 @@
     <div class="row border-bottom border-1 mb-3">
 
       <!-- Time 1 -->
-      <div class="col col-md-5 text-center">
+      <div class="col col-md-5 text-center" (click)="navigateDetalhe(resultadoDetalhe.timeCasa.id)">
         <div class="row">
           <div class="col-12">
             <div [style.margin-left.px]="resultadoDetalhe.pontosFora > resultadoDetalhe.pontosCasa ? 5 : -13">
@@ -32,7 +32,7 @@
       </div>
 
       <!-- Time 2-->
-      <div class="col col-lg-5 text-center">
+      <div class="col col-lg-5 text-center" (click)="navigateDetalhe(resultadoDetalhe.timeFora.id)">
         <div class="row">
           <div class="col-12">
             <div *ngIf="resultadoDetalhe">
