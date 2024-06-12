@@ -15,8 +15,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { ResultadoDetalheComponent } from './components/pages/resultado-detalhe/resultado-detalhe.component';
 import { TimeDetalheComponent } from './components/pages/time-detalhe/time-detalhe.component';
-
-
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -32,12 +31,13 @@ import { TimeDetalheComponent } from './components/pages/time-detalhe/time-detal
     ResultadoDetalheComponent,
     TimeDetalheComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgOptimizedImage,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
