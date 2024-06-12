@@ -32,12 +32,15 @@ export class ResultadoDetalheComponent implements OnInit {
     this.resultadoService.getResultadoDetalhe(this.idRecebido).subscribe({
       next: (res: Confronto) => {
         this.resultadoDetalhe = res;
-        console.log(this.resultadoDetalhe);
       },
       error: (error) => {
         console.log(error);
       },
     });
+  }
+
+  navigateDetalhe(id: number) {
+    this.router.navigateByUrl(`time-detalhe/${id}`);
   }
 
   voltar() {
