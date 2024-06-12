@@ -6,6 +6,7 @@ import { ResultadosComponent } from './components/pages/resultados/resultados.co
 import { TimesComponent } from './components/pages/times/times.component';
 import { JogosFuturosComponent } from './components/pages/jogos-futuros/jogos-futuros.component';
 import { ResultadoDetalheComponent } from './components/pages/resultado-detalhe/resultado-detalhe.component';
+import { TimeDetalheComponent } from './components/pages/time-detalhe/time-detalhe.component';
 
 const routes: Routes = [
   { path: '', component: RankingsComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'resultados', component: ResultadosComponent },
   { path: 'resultado-detalhe/:id', component: ResultadoDetalheComponent },
   { path: 'times', component: TimesComponent },
+  { path: 'time-detalhe/:id', component: TimeDetalheComponent },
   { path: 'jogos-futuros', component: JogosFuturosComponent },
 ];
 

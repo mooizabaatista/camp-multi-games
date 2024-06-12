@@ -1,0 +1,25 @@
+<div class="bg-cinza-claro">
+  <i (click)="voltar()" class="fa-regular fa-arrow-left fa-2x my-1 mx-3"></i>
+</div>
+
+<div *ngIf="timeDetalhe" class="mt-4 mb-3 p-5 bg-cinza-claro text-white rounded text-center mx-2"
+  style="position: relative;">
+  <div class="bg-image"
+    style="background-image: url('{{timeDetalhe.foto}}'); background-size: contain; background-repeat: no-repeat;background-position: center; opacity: 0.2; position: absolute; top: 0px; left: 0; width: 100%; height: 100%;">
+  </div>
+  <h1 class="text display-6" style="position: relative; z-index: 1;">{{timeDetalhe.name}}</h1>
+</div>
+
+<div class="container">
+  <div class="row mb-3 bg-cinza-claro">
+    <div class="col">
+      <h4 class="m-0 py-2">Últimos Jogos</h4>
+    </div>
+  </div>
+
+  <div class="row mb-3 bg-cinza-claro">
+    <div class="col">
+      <h4 class="m-0 py-2">Próximos Jogos</h4>
+    </div>
+  </div>
+</div>
