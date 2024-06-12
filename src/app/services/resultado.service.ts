@@ -20,4 +20,12 @@ export class ResultadoService {
   getResultadoDetalhe(id: number): Observable<Confronto> {
     return this.http.get<Confronto>(`${this.API_URL_DETALHE}/${id}`);
   }
+
+  getConfrontosFuturos(timeId: number) : Observable<Confronto[]> {
+    return this.http.get<Confronto[]>(`${this.API_URL_DETALHE}/time/futuros/${timeId}`);
+  }
+
+  getConfrontosPassados(timeId: number) : Observable<Confronto[]> {
+    return this.http.get<Confronto[]>(`${this.API_URL_DETALHE}/time/passados/${timeId}`);
+  }
 }
