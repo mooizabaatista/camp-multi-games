@@ -1,7 +1,7 @@
 <app-header textHeader="Futuros"></app-header>
 
 <div class="container mt-n1">
-  <div class="row border-bottom border-1 align-items-center" style="height: 85px" *ngFor="let futuro of futuros">
+  <div class="row border-bottom border-1 align-items-center" style="height: 85px" *ngFor="let futuro of futuros" (click)="navigateDetalhe(futuro.id)">
 
     <!-- Time 1 -->
     <div class="col col-md-5 text-center">

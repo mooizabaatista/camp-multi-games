@@ -72,4 +72,9 @@ export class TimeDetalheComponent {
   voltar() {
     this.location.back();
   }
+
+
+  navigateDetalhe(id: number) {
+    this.router.navigateByUrl(`resultado-detalhe/${id}`);
+  }
 }
