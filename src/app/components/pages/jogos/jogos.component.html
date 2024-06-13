@@ -1,20 +1,20 @@
 <app-header [textHeader]="'Jogos'"></app-header>
 
-<div class="mt-4 mb-3 py-5 bg-cinza-claro text-white rounded text-center mx-2" style="position: relative;"
+<div class="my-3 mb-3 py-5 bg-cinza-claro text-white rounded text-center mx-2 flex-column" style="position: relative; min-height: 200px;max-height: 200px;"
   *ngFor="let jogo of jogos">
   <div class="bg-image"
     style="background-image: url('{{jogo.bgImage}}'); background-size: cover; background-repeat: no-repeat;background-position: center; opacity: 0.4; position: absolute; top:0; left: 0; width: 100%; height: 100%;">
   </div>
 
 
-  <div class="sobreporBg">
+  <div class="sobreporBg mt-3">
     <h1 class="text-light fw-bold sobreporBg"> {{jogo.name | uppercase}}</h1>
     <span class="fs-3">{{jogo.pontosPorGame}} pts.</span>
   </div>
 </div>
 
 
-<div class="mt-4 mb-3 py-5 bg-cinza-claro text-white rounded text-center mx-2" style="position: relative;"
+<div class="my-3 mb-3 py-5 bg-cinza-claro text-white rounded text-center mx-2" style="position: relative; min-height: 200px;max-height: 200px;"
   *ngFor="let jogo of jogosFfa">
   <div class="bg-image"
     style="background-image: url('{{jogo.bgImage}}'); background-size: cover; background-repeat: no-repeat;background-position: center; opacity: 0.4; position: absolute; top:0; left: 0; width: 100%; height: 100%;">
