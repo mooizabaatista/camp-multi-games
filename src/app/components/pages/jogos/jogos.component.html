@@ -6,21 +6,27 @@
     style="background-image: url('{{jogo.bgImage}}'); background-size: cover; background-repeat: no-repeat;background-position: center; opacity: 0.4; position: absolute; top:0; left: 0; width: 100%; height: 100%;">
   </div>
 
-  <!-- <div class="d-flex justify-content-around align-items-center" style="position: relative; z-index: 1;">
-    <h1 class="text display-5" >{{jogo.name}}</h1>
-    <div class="d-flex flex-column fs-3 me-2">
-      <span class="d-flex align-items-center"><span class="fw-bold fs-1"><i
-            class=" me-2 fa-regular fa-square-1"></i></span> {{jogo.pontosPorGame}} pts.</span>
-      <span class="d-flex align-items-center"><span class="fw-bold fs-1"><i
-            class=" me-2 fa-regular fa-square-2"></i></span> {{jogo.pontosPorGame}} pts.</span>
-      <span class="d-flex align-items-center"><span class="fw-bold fs-1"><i
-            class=" me-2 fa-regular fa-square-3"></i></span> {{jogo.pontosPorGame}} pts.</span>
-      <span class="d-flex align-items-center"><span class="fw-bold fs-1"><i
-            class=" me-2 fa-regular fa-square-4"></i></span> {{jogo.pontosPorGame}} pts.</span>
-    </div> -->
 
-  <div style="position: relative; z-index: 1;">
-    <h5 class="text-light fw-bold" style="position: relative; z-index: 1;"> {{jogo.name}}</h5>
-    <span>{{jogo.pontosPorGame}} pts.</span>
+  <div class="sobreporBg">
+    <h1 class="text-light fw-bold sobreporBg"> {{jogo.name | uppercase}}</h1>
+    <span class="fs-3">{{jogo.pontosPorGame}} pts.</span>
+  </div>
+</div>
+
+
+<div class="mt-4 mb-3 py-5 bg-cinza-claro text-white rounded text-center mx-2" style="position: relative;"
+  *ngFor="let jogo of jogosFfa">
+  <div class="bg-image"
+    style="background-image: url('{{jogo.bgImage}}'); background-size: cover; background-repeat: no-repeat;background-position: center; opacity: 0.4; position: absolute; top:0; left: 0; width: 100%; height: 100%;">
+  </div>
+
+  <h1 class="text display-5 sobreporBg">PUBG</h1>
+  <div class="d-flex justify-content-around align-items-center sobreporBg">
+    <div class="d-flex flex-column fs-3 me-2" *ngFor="let pontoColocacao of jogo.pontosPorColocacao">
+      <span class="fw-bold fs-1">
+        <i class=" me-2 fa-regular fa-square-{{pontoColocacao.colocacao}}"></i>
+      </span>
+      <span class="d-flex align-items-center">{{pontoColocacao.ponto}}pts.</span>
+    </div>
   </div>
 </div>

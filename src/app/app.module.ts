@@ -17,6 +17,7 @@ import { ResultadoDetalheComponent } from './components/pages/resultado-detalhe/
 import { TimeDetalheComponent } from './components/pages/time-detalhe/time-detalhe.component';
 import {NgOptimizedImage} from "@angular/common";
 import { VoltarComponent } from './components/shared/voltar/voltar.component';
+import { RankingFfaComponent } from './components/ranking-ffa/ranking-ffa.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { VoltarComponent } from './components/shared/voltar/voltar.component';
     ResultadoDetalheComponent,
     TimeDetalheComponent,
     VoltarComponent,
+    RankingFfaComponent,
   ],
     imports: [
         BrowserModule,
