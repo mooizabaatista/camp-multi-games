@@ -16,6 +16,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { ResultadoDetalheComponent } from './components/pages/resultado-detalhe/resultado-detalhe.component';
 import { TimeDetalheComponent } from './components/pages/time-detalhe/time-detalhe.component';
 import {NgOptimizedImage} from "@angular/common";
+import { VoltarComponent } from './components/shared/voltar/voltar.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {NgOptimizedImage} from "@angular/common";
     HeaderComponent,
     ResultadoDetalheComponent,
     TimeDetalheComponent,
+    VoltarComponent,
   ],
     imports: [
         BrowserModule,
