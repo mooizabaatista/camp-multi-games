@@ -9,7 +9,7 @@
 
   <div class="sobreporBg mt-3">
     <h1 class="text-light fw-bold sobreporBg"> {{jogo.name | uppercase}}</h1>
-    <span class="fs-3">{{jogo.pontosPorGame}} pts.</span>
+    <span class="fs-3">{{jogo.pontosPorGame}} pts</span>
   </div>
 </div>
 
@@ -23,10 +23,10 @@
   <h1 class="text display-5 sobreporBg">PUBG</h1>
   <div class="d-flex justify-content-around align-items-center sobreporBg">
     <div class="d-flex flex-column fs-3 me-2" *ngFor="let pontoColocacao of jogo.pontosPorColocacao">
-      <span class="fw-bold fs-1">
-        <i class=" me-2 fa-regular fa-square-{{pontoColocacao.colocacao}}"></i>
+      <span class="fw-bold fs-1 d-flex justify-content-center">
+        <i class="fa-regular fa-square-{{pontoColocacao.colocacao}}"></i>
       </span>
-      <span class="d-flex align-items-center">{{pontoColocacao.ponto}}pts.</span>
+      <span class="d-flex align-items-center">{{pontoColocacao.ponto}} pts</span>
     </div>
   </div>
 </div>

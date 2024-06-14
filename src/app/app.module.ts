@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,6 +18,7 @@ import { TimeDetalheComponent } from './components/pages/time-detalhe/time-detal
 import {NgOptimizedImage} from "@angular/common";
 import { VoltarComponent } from './components/shared/voltar/voltar.component';
 import { RankingFfaComponent } from './components/ranking-ffa/ranking-ffa.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,12 @@ import { RankingFfaComponent } from './components/ranking-ffa/ranking-ffa.compon
         HttpClientModule,
         FormsModule,
         NgOptimizedImage,
+        ServiceWorkerModule.register('ngsw-worker.js', {
+          enabled: !isDevMode(),
+          // Register the ServiceWorker as soon as the application is stable
+          // or after 30 seconds (whichever comes first).
+          registrationStrategy: 'registerWhenStable:30000'
+        }),
     ],
   providers: [],
   bootstrap: [AppComponent]

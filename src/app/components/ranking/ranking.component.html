@@ -46,7 +46,7 @@
         class="w-100 py-3 text-light my-2 radius-10px bg-cinza-claro d-flex justify-content-center align-items-center"
         type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + (i + indexMaxRanking)" aria-expanded="true"
         aria-controls="collapseOne">
-        <h3 class="m-0 p-0 {{item.name !== 'Geral' ? 'fs-5 ' : 'fs-3 fw-bold '}}">PUBG</h3>
+        <h3 class="m-0 p-0 {{item.name !== 'Geral' ? 'fs-5 ' : 'fs-3 fw-bold '}}">{{ item.name }}</h3>
         <i class="fa-sharp fa-solid fa-chevron-down fs-6" style="position: absolute; right:30px;"></i>
       </button>
     </h2>
@@ -68,10 +68,10 @@
             <tr *ngFor="let itemTabela of item.tabelas; let it = index">
               <td class="small">{{itemTabela.time}}</td>
               <td class="fw-bold">{{itemTabela.pontos}}</td>
-              <td class="fw-bold">{{itemTabela.p1}}</td>
+              <td class="fw-bold text-success-custom">{{itemTabela.p1}}</td>
               <td class="fw-bold">{{itemTabela.p2}}</td>
               <td class="fw-bold">{{itemTabela.p3}}</td>
-              <td class="fw-bold">{{itemTabela.p4}}</td>
+              <td class="fw-bold text-danger">{{itemTabela.p4}}</td>
             </tr>
           </tbody>
         </table>
