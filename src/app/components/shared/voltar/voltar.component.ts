@@ -1,16 +1,23 @@
+import { Component, OnInit, Input } from '@angular/core';
 import { Location } from '@angular/common';
-import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-voltar',
   templateUrl: './voltar.component.html',
   styleUrls: ['./voltar.component.css']
 })
-export class VoltarComponent {
+export class VoltarComponent implements OnInit {
 
-  constructor(private location: Location) { }
+  @Input() proprietaryOptional: string | undefined;
+
+  constructor(private location: Location) {
+  }
 
   voltar() {
     this.location.back();
   }
+
+  ngOnInit(): void {
+  }
+
 }

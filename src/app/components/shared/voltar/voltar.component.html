@@ -1,3 +1,6 @@
 <div class="bg-cinza-escuro">
-  <i (click)="voltar()" class="fa-regular fa-arrow-left fa-2x my-1 mx-3"></i>
+  <i (click)="voltar()" class="fa-regular fa-arrow-left fa-2x my-1 mx-3 posiabsolute"></i>
+  <div class="textoid">
+  <span  *ngIf="proprietaryOptional != null">Confronto nº: {{proprietaryOptional}}</span>
+  </div>
 </div>

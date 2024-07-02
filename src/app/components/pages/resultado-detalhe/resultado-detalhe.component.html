@@ -1,4 +1,4 @@
-<app-voltar></app-voltar>
+<app-voltar [proprietaryOptional]=resultadoDetalhe.id.toString()></app-voltar>
 
 <div *ngIf="resultadoDetalhe">
   <div class="container mt-4">
@@ -8,12 +8,12 @@
       <div class="col col-md-5 text-center" (click)="navigateDetalhe(resultadoDetalhe.timeCasa.id)">
         <div class="row">
           <div class="col-12">
-            <div [style.margin-left.px]="resultadoDetalhe.pontosFora > resultadoDetalhe.pontosCasa ? 5 : -13">
+            <div [style.margin-left.px]="resultadoDetalhe.pontosCasa > resultadoDetalhe.pontosFora ? -18 : 0">
               <sup *ngIf="resultadoDetalhe.pontosCasa > resultadoDetalhe.pontosFora"><i
                   class="fa-solid fa-trophy text-warning me-1"></i></sup>
               <img width="35px" src="{{resultadoDetalhe.timeCasa.foto}}">
             </div>
-            <h6 class="mt-2 ms-1 small">{{resultadoDetalhe.timeCasa.name}}</h6>
+            <h6 class="mt-2 small">{{resultadoDetalhe.timeCasa.name}}</h6>
           </div>
         </div>
       </div>
@@ -34,14 +34,14 @@
         <div class="row">
           <div class="col-12">
             <div *ngIf="resultadoDetalhe">
-              <div [style.margin-left.px]="resultadoDetalhe.pontosFora > resultadoDetalhe.pontosCasa ? -13 : 0">
+              <div [style.margin-left.px]="resultadoDetalhe.pontosFora > resultadoDetalhe.pontosCasa ? -20 : 0">
                 <sup *ngIf="resultadoDetalhe.pontosFora > resultadoDetalhe.pontosCasa">
                   <i class="fa-solid fa-trophy text-warning me-1"></i>
                 </sup>
                 <img width="35px" [src]="resultadoDetalhe.timeFora.foto">
               </div>
             </div>
-            <h6 class="mt-2 ms-1 small">{{resultadoDetalhe.timeFora.name}}</h6>
+            <h6 class="mt-2 small">{{resultadoDetalhe.timeFora.name}}</h6>
           </div>
         </div>
       </div>
