@@ -56,16 +56,26 @@
     <div class="card bg-cinza-claro text-light border border-1 py-1 mb-2">
       <div class="d-flex text-center align-items-center">
 
-        <h6 class="me-auto m-0 p-0 mt-1 d-flex flex-column" style="width: 20%;">{{mapa.pontosCasa}} <span
-            *ngIf="mapa.timePickId == resultadoDetalhe.timeCasa.id" class="ms-1 text-success-custom"
-            style="font-size: 0.6em; font-weight: 800;">PICKED</span> </h6>
+        <h6 class="me-auto m-0 p-0 mt-1 d-flex flex-column bold" style="width: 20%; "
+            [ngClass]="mapa.pontosCasa>mapa.pontosFora ? 'winmap' : 'lossmap'"
+        >{{mapa.pontosCasa}}
+          <span *ngIf="mapa.timePickId == resultadoDetalhe.timeCasa.id"
+                class="ms-1 text-success-custom"
+                style="font-size: 0.6em; font-weight: 800;">PICKED
+          </span>
+        </h6>
 
         <span>{{mapa.nomeMapa | uppercase}}</span>
 
 
-        <h6 class="ms-auto m-0 p-0 mt-1 d-flex flex-column" style="width: 20%;">{{mapa.pontosFora}} <span
-            *ngIf="mapa.timePickId == resultadoDetalhe.timeFora.id" class="ms-1 text-success-custom"
-            style="font-size: 0.6em; font-weight: 800;">PICKED</span> </h6>
+        <h6 class="ms-auto m-0 p-0 mt-1 d-flex flex-column" style="width: 20%;"
+            [ngClass]="mapa.pontosFora>mapa.pontosCasa ? 'winmap' : 'lossmap'">
+          {{mapa.pontosFora}}
+          <span *ngIf="mapa.timePickId == resultadoDetalhe.timeFora.id" class="ms-1 text-success-custom"
+            style="font-size: 0.6em; font-weight: 800;">
+            PICKED
+          </span>
+        </h6>
       </div>
     </div>
   </div>
